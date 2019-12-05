@@ -8,6 +8,8 @@
         <link rel="shortcut icon" href="./4geeks.ico"></head>
     <body>
         <div class="container-fluid text-center">
+            <div id="alertDanger">
+            </div>
             <form id="myForm" class="form">
                 <div class="form-group">
                     <label for="username">Username</label>
@@ -31,7 +33,8 @@
             const whatever = document.querySelector("#myForm");
                 myForm.addEventListener("submit", (e) => {
                     e.preventDefault();
-                    console.log("Form Submitted")
+                    document.querySelector("#alertDanger").innerHTML= `<div class="alert alert-danger" role="alert">Alert! No Username Entered!</div>`;
+                    <!-- document.querySelector("#username").input= `<input background-color= 'red'></input> -->
             })
         </script>
         <!-- do not remove this bundle.js tag -->
